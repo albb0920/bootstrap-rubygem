@@ -138,7 +138,7 @@ var Tab = function ($) {
     Tab.prototype._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var active = $(container).find(Selector.ACTIVE)[0];
+      var active = $(container).children(Selector.ACTIVE)[0];
       var isTransitioning = callback && Util.supportsTransitionEnd() && active && $(active).hasClass(ClassName.FADE);
 
       var complete = function complete() {
